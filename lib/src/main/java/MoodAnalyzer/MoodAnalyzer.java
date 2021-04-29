@@ -11,10 +11,14 @@ public class MoodAnalyzer {
     }
 
     // Method that return the mood
-    public String moodAnalyzer(String mood)
+    public String moodAnalyzer(String mood) throws MoodAnalysisException
     {
         try
         {
+            if(message.length()==0)
+            {
+                throw new MoodAnalysisException(MoodAnalysisException.MyException_Type.EMPTY,"You entered empty mood,please enter valid mood");
+            }
             if (message.contains("sad"))
             {
                 return ("sad");
@@ -26,7 +30,7 @@ public class MoodAnalyzer {
         }
         catch (NullPointerException e)
         {
-            return ("happy");
+            throw new MoodAnalysisException(MoodAnalysisException.MyException_Type.NULL,"You entered null mood,please enter valid mood");
         }
         return (mood);
     }
