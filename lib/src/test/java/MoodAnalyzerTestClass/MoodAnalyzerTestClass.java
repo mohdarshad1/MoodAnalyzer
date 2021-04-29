@@ -13,7 +13,7 @@ public class MoodAnalyzerTestClass {
     {
         MoodAnalyzer mood=new MoodAnalyzer("I am in sad mood");
         String reaction=mood.moodAnalyzer("");
-        Assert.assertEquals("Sad", reaction);
+        Assert.assertEquals("sad", reaction);
     }
     /* TC1.2:Given I am in Any mood message should return happy */
     @Test
@@ -21,6 +21,6 @@ public class MoodAnalyzerTestClass {
     {
         MoodAnalyzer mood=new MoodAnalyzer("I am in Any mood");
         String reaction=mood.moodAnalyzer("");
-        Assert.assertEquals("Happy",reaction);
+        Assert.assertEquals("happy",reaction);
     }
 }

@@ -15,10 +15,10 @@ public class MoodAnalyzer {
     {
         if (message.contains("sad"))
         {
-            return ("Sad");
+            return ("sad");
         } else if (message.contains("Any"))
         {
-            return ("Happy");
+            return ("happy");
         }
         return (mood);
     }
